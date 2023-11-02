@@ -1,0 +1,60 @@
+{
+  "name": "storage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "core-js": "^3.33.2",
+    "element-plus": "^2.2.6",
+    "es6-promise": "^4.2.8",
+    "js-cookie": "^3.0.1",
+    "vue": "3.2.33",
+    "vue-i18n": "^9.2.0-beta.35",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/preset-env": "^7.20.2",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "babel-loader": "^9.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "https-proxy-agent": "^5.0.0",
+    "node-sass": "^7.0.3",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "requireConfigFile": false,
+      "allowImportExportEverywhere": true
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

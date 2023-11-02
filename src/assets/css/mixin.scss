@@ -1,0 +1,409 @@
+@import "./theme.scss";    //引入声明的皮肤文件
+@mixin background_main_color($color) { //@mixin 后面的函数名称为自定义
+  background: $color;   //背景色默认为参数
+  [theme="default"] & {
+      background: $background_main_default;
+  };
+  [theme="color2"] & {
+      background: $background_main_color2;
+  }
+}
+@mixin header_color() {
+  [theme="default"] & {
+    background: $menu_item_active_background_default;
+    color: $background_content_default;
+  }
+  [theme="color2"] & {
+    background: $background_content_color2;  
+    color: $font_color_color2;
+  }
+}
+@mixin background_content_color() {
+  [theme="default"] & {
+    background: $background_content_default;
+    color: $font_color_default;
+  }
+  [theme="color2"] & {
+    background: $background_content_color2;  
+    color: $font_color_color2;
+  }
+}
+@mixin font_color($color) {
+  color: $color !important;
+  path {
+    fill: $color;
+  }
+  [theme="default"] & {
+    color: $color !important;
+    path {
+      fill: $color;
+    }
+  }
+  [theme="color2"] & {
+    color: $font_color_color2 !important;
+    path {
+      fill: $font_color_color2;
+    }
+  }
+}
+@mixin menu_item_active($color, $background) {
+  color: $color;
+  background: $background;
+  [theme="default"] & {
+    color: $menu_item_active_font_default;
+    background: $menu_item_active_background_default;
+    .el-icon{
+      svg{
+        path{
+          fill: $menu_item_active_font_default;
+        }
+      }
+    }
+  }
+  [theme="color2"] & {
+    color: $menu_item_active_font_color2;
+    background: $menu_item_active_background_color2;
+  }
+}
+@mixin menu_item_hover($color, $background) {
+  color: $color;
+  background: $background;
+  [theme="default"] & {
+    color: $color;
+    background: $menu_item_hover_background_default;
+    --el-tree-node-hover-bg-color: #283747;
+    .el-icon{
+      svg{
+        path{
+          fill: $menu_item_active_font_default;
+        }
+      }
+    }
+  }
+  [theme="color2"] & {
+    color: $menu_item_hover_font_color2;
+    background: $menu_item_hover_background_color2;
+    --el-tree-node-hover-bg-color: #59b3eb96;
+  }
+}
+@mixin table_header($color, $background) {
+  color: $color;
+  background: $background !important;
+  [theme="default"] & {
+    color: $table_header_font_default;
+    background: $table_header_background_default !important;
+  }
+  [theme="color2"] & {
+    color: $table_header_font_color2;
+    background: $table_header_background_color2 !important;
+  }
+}
+@mixin active_table_header() {
+  [theme="default"] & {
+    color: $background_content_default !important;
+    background: $select_dropdown_font_selected_default !important;
+  }
+  [theme="color2"] & {
+    color: $table_header_font_color2;
+    background: $table_header_background_color2 !important;
+  }
+}
+@mixin table_row_current($background) {
+  background: $background;
+  [theme="default"] & {
+    background: $table_row_current_background_default !important;
+  }
+  [theme="color2"] & {
+    background: $table_row_current_background_color2 !important;
+  }
+}
+@mixin table_row_error($background) {
+  background: $background;
+  [theme="default"] & {
+    background: $table_row_error_background_default;
+  }
+  [theme="color2"] & {
+    background: $table_row_error_background_color2;
+  }
+}
+@mixin table_border($border) {
+  box-sizing: border-box;
+  --el-table-border-color: $border;
+  border-color: $border;
+  [theme="default"] & {
+    --el-table-border-color: #ebeef5;
+    border-color: $table_border_default !important;
+  }
+  [theme="color2"] & {
+    --el-table-border-color: #296e94;
+    border-color: $table_border_color2 !important;
+  }
+}
+@mixin group_button() {
+  [theme="default"] & {
+    background: $groups_button_background_default;
+    color: $background_content_default;
+    border: none;
+    // border-radius: 2px;
+    // height: 26px;
+    // line-height: 26px;
+    // padding: 0 8px;
+    path {
+      fill: $groups_button_font_default;
+    }
+  }
+  [theme="color2"] & {
+    background: $groups_button_background_color2;
+    color: $groups_button_font_color2;
+    border: none;
+    border-color: $groups_button_border_color2;
+    path {
+      fill: $groups_button_font_color2;
+    }
+  }
+}
+@mixin group_button_disabled() {
+  [theme="default"] & {
+    background: $groups_button_disabled_background_default;
+    color: $groups_button_disabled_font_default;
+    border-color: $groups_button_disabled_border_default;
+    path {
+      fill: $groups_button_disabled_font_default;
+    }
+  }
+  [theme="color2"] & {
+    background: $groups_button_disabled_background_color2;
+    color: $groups_button_disabled_font_color2;
+    border-color: $groups_button_disabled_border_color2;
+    path {
+      fill: $groups_button_disabled_font_color2;
+    }
+  }
+}
+@mixin button_hover() {
+  [theme="default"] & {
+    background: $menu_item_hover_font_default;
+    color: $background_content_default;
+    border-color: $menu_item_hover_font_default;
+  }
+}
+@mixin dialog_content($background, $border, $color) {
+  background: $background;
+  border-color: $border;
+  color: $color;
+  [theme="default"] & {
+    background: $background_content_default;  
+    border-color: $table_border_default;
+    color: $font_color_default;
+  }
+  [theme="color2"] & {
+    background: $background_content_color2;
+    border-color: $table_border_color2;
+    color: $font_color_color2; 
+  }
+}
+@mixin dialog_header_and_footer($background, $border, $color) {
+  background: $background;
+  border-color: $border;
+  color: $color;
+  [theme="default"] & {
+    background: $background_main_default; 
+    border-color: $table_border_default;
+    color: $font_color_default;
+  }
+  [theme="color2"] & {
+    background: $background_main_color2;
+    border-color: $table_border_color2;
+    color: $font_color_color2;
+  }
+}
+@mixin input_and_select {
+  [theme="default"] & {
+    --el-input-border-color: #dcdfe6;
+    --el-input-text-color: #606266;
+    --el-input-focus-border-color: #409eff;
+    --el-input-hover-border-color: #c0c4cc;
+    --el-select-border-color-hover: #c0c4cc;
+    --el-select-input-focus-border-color: #409eff;
+  }
+  [theme="color2"] & {
+    --el-input-border-color: #296e94;
+    --el-input-text-color: #ffffff;
+    --el-input-focus-border-color: #105c85;
+    --el-input-hover-border-color: #105c85;
+    --el-select-border-color-hover: #105c85;
+    --el-select-input-focus-border-color: #105c85;
+  }
+}
+@mixin select_dropdown {
+  [theme="default"] & {
+    background: $select_dropdown_background_default;
+  }
+  [theme="color2"] & {
+    background: $select_dropdown_background_color2;
+  }
+}
+@mixin select_dropdown_hover {
+  [theme="default"] & {
+    background: $select_dropdown__background_hover_default;
+    color: $font_color_default;
+  }
+  [theme="color2"] & {
+    background: $select_dropdown__background_hover_color2;
+    color: $font_color_color2;
+  }
+}
+@mixin select_dropdown_selected {
+  [theme="default"] & {
+    color: $select_dropdown_font_selected_default !important;
+  }
+  [theme="color2"] & {
+    color: $select_dropdown_font_selected_color2 !important;
+  }
+}
+@mixin select_dropdown_disabled {
+  [theme="default"] & {
+    color: $select_dropdown_font_disabled_default !important;
+  }
+  [theme="color2"] & {
+    color: $select_dropdown_font_disabled_color2 !important;
+  }
+}
+@mixin collapse_header { 
+  [theme="default"] & {
+    border: none;
+    font-size: 16px;
+    background: $main_header_background_default;
+    color: $background_content_default;
+    border-color: $table_border_default;
+  }
+  [theme="color2"] & {
+    background: $collapse_header_background_color2 !important;
+    color: $font_color_color2 !important;
+    border-color: $table_border_color2;
+  }
+}
+@mixin divider_border {
+  [theme="default"] & {
+    background: #ececec;
+    border: none;
+  }
+  [theme="color2"] & {
+    border-color: $divider_border_color2;
+  }
+}
+@mixin main_header {
+  [theme="default"] & {
+    background: $main_header_background_default;
+  }
+  [theme="color2"] & {
+    background: $collapse_header_background_color2;
+  }
+}
+@mixin disabled_input_and_select {
+  [theme="default"] & {
+    background: $disabled_input_and_select_background_default;
+    --el-disabled-border-color: #dcdfe6;
+    --el-select-disabled-border: #dcdfe6;
+  }
+  [theme="color2"] & {
+    background: $disabled_input_and_select_background_color2;
+    --el-disabled-border-color: #296e94;
+    --el-select-disabled-border: #296e94;
+  }
+}
+//scrollbar
+@mixin scrollbar_track {
+  [theme="default"] & {
+    background-color: $scrollbar_track_background_default;
+  }
+  [theme="color2"] & {
+    background-color: $scrollbar_track_background_color2;
+  }
+}
+@mixin scrollbar_thumb {
+  [theme="default"] & {
+    background-color: $scrollbar_thumb_background_default;
+  }
+  [theme="color2"] & {
+    background-color: $scrollbar_thumb_background_color2;
+  }
+}
+@mixin scrollbar_thumb_hover {
+  [theme="default"] & {
+    background-color: $scrollbar_thumb_hover_background_default;
+  }
+  [theme="color2"] & {
+    background-color: $scrollbar_thumb_hover_background_color2;
+  }
+}
+@mixin radio_button {
+  [theme="default"] & {
+    background-color: $scrollbar_thumb_hover_background_default;
+  }
+  [theme="color2"] & {
+    background-color: $scrollbar_thumb_hover_background_color2;
+  }
+}
+@mixin radio_button_checked {
+  [theme="default"] & {
+    background-color: $radio_button_checked_background_default;
+    color: $radio_button_checked_color_default;
+    border-color: $radio_button_checked_border_default;
+  }
+  [theme="color2"] & {
+    background-color: $radio_button_checked_background_color2;
+    color: $radio_button_checked_color_color2;
+    border-color: $radio_button_checked_border_color2;
+  }
+}
+@mixin radio_button {
+  [theme="default"] & {
+    background-color: $radio_button_background_default;
+    color: $radio_button_color_default;
+    border-color: $radio_button_border_default;
+  }
+  [theme="color2"] & {
+    background-color: $radio_button_background_color2;
+    color: $radio_button_color_color2;
+    border-color: $radio_button_border_color2;
+  }
+}
+@mixin tags_info {
+  [theme="default"] & {
+    background-color: $tags_info_background_default;
+    color: $font_color_default;
+  }
+  [theme="color2"] & {
+    background-color: $tags_info_background_color2;
+    color: $font_color_color2;
+  }
+}
+@mixin checkbox_and_radio {
+  [theme="default"] & {
+    background-color: $checkbox_and_radio_background_default;
+    color: $font_color_default;
+  }
+  [theme="color2"] & {
+    background-color: $checkbox_and_radio_background_color2;
+    color: $font_color_color2;
+  }
+}
+@mixin footer_button {
+  [theme="default"] & {
+    background: $footer_button_hover_background_default !important;
+    color: $font_color_default;
+  }
+  [theme="color2"] & {
+    background: $footer_button_hover_background_color2 !important;
+    color: $font_color_color2;
+  }
+}
+@mixin loading_mask {
+  [theme="default"] & {
+    background: $loading_mask_background_default;
+  }
+  [theme="color2"] & {
+    background: $loading_mask_background_color2;
+  }
+}

@@ -1,0 +1,555 @@
+@import 'element-plus/dist/index.css';
+@import '@/assets/css/mixin.scss';
+/* Chrome 滚动条优化 */
+* {
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 8px;
+    @include scrollbar_thumb();
+    transition: background-color 0.3s;
+
+    &:hover {
+      @include scrollbar_thumb_hover();
+    }
+  }
+  &::-webkit-scrollbar-corner {
+    @include scrollbar_track();
+  }
+
+  &::-webkit-scrollbar-track {
+    @include scrollbar_track();
+  }
+}
+.storage-content {
+  text-align: left;
+  padding: 10px;
+  height: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: auto;
+  @include background_content_color();
+  padding-bottom: 50px;
+  position: relative;
+  .el-pagination{
+    position: absolute;
+    bottom: 6px;
+    right: 20px;
+  }
+}
+//table
+.el-table {
+  font-size: 14px;
+  @include background_content_color();
+  --el-table-row-hover-bg-color: unset;
+  --el-table-current-row-bg-color: unset;
+  // --el-table-border-color: unset;
+  @include table_border($table_border_default);
+}
+.el-table--fit {
+  @include table_border($table_border_default);
+}
+.el-table__row:hover {
+  background: #ffffff00;
+  cursor: pointer;
+}
+.current-row {
+  @include font_color($font_color_default);
+  @include table_row_current($table_row_current_background_default);
+}
+.el-table tr {
+  @include background_content_color();
+  @include font_color($font_color_default);
+  .el-button {
+    font-size: 14px;
+  }
+  .el-button--primary {
+    @include group_button();
+  }
+  .el-button--primary.is-disabled {
+    @include group_button();
+    @include font_color($background_content_default);
+    opacity: .5;
+  }
+  .el-button.is-link {
+    @include font_color($font_color_default);
+    [theme="default"] & {
+      background: $menu_item_active_font_default !important;
+      // border:1px solid $menu_item_active_font_default;
+      color: $background_content_default !important;
+      padding: 0 8px;
+      height: 26px;
+      line-height: 26px;
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  .el-button:hover, .el-button:focus{
+    @include button_hover()
+  }
+}
+.error-row {
+  @include table_row_error($table_row_error_background_default)
+}
+.table-header-row {
+  @include table_header($table_header_font_default, $table_header_background_default)
+}
+.el-table th.el-table__cell {
+  @include table_header($table_header_font_default, $table_header_background_default)
+}
+.el-table__expanded-cell {
+  @include background_content_color();
+}
+.el-table__body-wrapper tr td.el-table-fixed-column--right {
+  @include background_content_color();
+}
+// menu
+.menu{
+  [theme="color2"] & {
+    padding-left: 0px !important;
+  }
+}
+.el-menu-item {
+  height: 35px;
+  color: $background_content_default;
+  path {
+    fill: $background_content_default;
+  }
+}
+.el-menu {
+  border-right: 0px;
+  height: 100%;
+  [theme="default"] & {
+    background: $menu_item_active_background_default;
+  }
+  [theme="color2"] & {
+    background: $collapse_header_background_color2;
+  }
+}
+.el-menu-item.is-active {
+  @include menu_item_active($menu_item_active_font_default, $menu_item_active_background_default)
+}
+.el-menu-item:hover {
+  @include menu_item_hover($menu_item_hover_font_default, $menu_item_hover_background_default)
+}
+.common-layout {
+  @include background_main_color($background-main-default);
+  height: 100%;
+}
+.el-aside{
+  height: 100%;
+  @include main_header();
+}
+.el-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 5px;
+  @include background_content_color();
+}
+.el-header {
+  @include header_color();
+}
+.el-divider--horizontal {
+  @include divider_border();
+}
+.el-divider--vertical {
+  width: 0;
+  @include divider_border()
+}
+.main-view {
+  @include background_content_color();
+}
+.buttongroups {
+  .el-button {
+    font-size: 16px;
+    @include group_button();
+    @include font_color($background_content_default);
+  }
+  .el-button.is-disabled{
+    @include group_button();
+    @include font_color($background_content_default);
+    opacity: .5;
+  }
+}
+//dialog
+.el-dialog__headerbtn{
+  padding: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.el-dialog__header{
+  padding: 10px 20px;
+  text-align: left;
+  border: 1px solid;
+  margin-right: 0;
+  box-sizing: border-box;
+  @include dialog_header_and_footer($background_main_default, $table_border_default, $font_color_default)
+}
+.el-dialog__title{
+  font-size: 16px;
+  @include font_color($font_color_default)
+}
+.el-dialog__footer{
+  padding: 10px;
+  border: 1px solid;
+  @include dialog_header_and_footer($background_main_default, $table_border_default, $font_color_default);
+  .el-button--primary {
+    @include group_button();
+  }
+  .el-button:hover, .el-button:focus{
+    @include button_hover()
+  }
+  .el-button.is-disabled{
+    @include group_button_disabled();
+  }
+}
+.el-dialog__body{
+  padding: 10px 20px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  @include dialog_content($background_content_default, $table_border_default, $font_color_default)
+}
+//message box
+.el-message-box {
+  @include dialog_content($background_content_default, $table_border_default, $font_color_default)
+}
+.el-message-box__title {
+  @include font_color($font_color_default)
+}
+.el-message-box__message {
+  @include font_color($font_color_default)
+}
+.el-form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @include table_border($table_border_default);
+}
+.el-form-item{
+  width: 48%;
+  margin: 0 1% 24px 1%;
+  @include table_border($table_border_default);
+}
+.el-table{
+  .el-radio__label{
+    display: none;
+  }
+}
+// input
+.el-input-number.is-controls-right .el-input-number__increase {
+  @include divider_border();
+  @include font_color($font_color_default);
+  @include background_content_color();
+}
+.el-input-number.is-controls-right .el-input-number__decrease {
+  @include font_color($font_color_default);
+  @include background_content_color();
+  @include divider_border()
+}
+.el-input__wrapper {
+  @include background_content_color();
+  @include input_and_select();
+}
+.el-input.is-disabled .el-input__wrapper {
+  @include disabled_input_and_select();
+}
+.el-textarea__inner {
+  @include background_content_color();
+  @include input_and_select();
+}
+.el-form-item__label {
+  @include font_color($font_color_default)
+}
+//select
+.el-select.is-disabled {
+  @include disabled_input_and_select();
+}
+// tabs
+.el-tabs__header {
+  @include table_border($table_border_default);
+}
+.el-tabs__nav {
+  @include table_border($table_border_default);
+}
+.el-tabs__item {
+  @include table_border($table_border_default);
+  @include font_color($font_color_default);
+}
+.el-tabs__item.is-active {
+  @include table_border($table_border_default);
+  @include active_table_header();
+}
+.el-tabs__item.is-disabled {
+  cursor: not-allowed
+}
+//select-dropdown
+.el-select-dropdown {
+  @include select_dropdown();
+}
+.el-select-dropdown__item {
+  @include font_color($font_color_default)
+}
+.el-select-dropdown__item.hover {
+  @include select_dropdown_hover();
+}
+.el-select-dropdown__item.selected {
+  @include select_dropdown_selected();
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  @include select_dropdown();
+}
+//tooltip
+.el-popper.is-light {
+  padding: 0;
+  @include table_border($table_border_default);
+  @include select_dropdown();
+}
+.el-popper.is-light .el-popper__arrow::before {
+  @include table_border($table_border_default);
+  @include select_dropdown();
+}
+//dropdown
+.el-dropdown__popper .el-dropdown-menu {
+  @include table_border($table_border_default);
+  @include select_dropdown();
+}
+.el-dropdown-menu__item {
+  @include font_color($font_color_default)
+}
+.el-dropdown-menu__item:hover {
+  @include select_dropdown_hover();
+}
+.el-dropdown-menu__item.selected {
+  @include select_dropdown_selected();
+}
+.el-dropdown-menu__item.is-disabled {
+  @include select_dropdown_disabled();
+}
+.el-dropdown-menu__item--divided {
+  @include divider_border()
+}
+//collapse
+.el-collapse {
+  border-top: 0px
+}
+.el-collapse-item__header {
+  @include collapse_header();
+}
+.el-collapse-item__header.is-active {
+  @include collapse_header();
+}
+.el-collapse-item__wrap {
+  @include collapse_header();
+}
+//tree
+.el-tree {
+  // --el-tree-node-hover-bg-color: unset;
+  @include menu_item_hover($background_content_default, $menu_item_hover_background_default);
+  [theme="default"] & {
+    .el-tree-node__expand-icon{
+      svg{
+        path{
+          fill: #ababb2;
+        }
+      }
+      &.is-leaf{
+        svg{
+          path{
+            fill: none;
+          }
+        }
+      }
+    }
+  }
+}
+.el-tree-node.is-current>.el-tree-node__content {
+  @include menu_item_active($menu_item_active_font_default, $menu_item_active_background_default);
+  [theme="default"] & {
+    .el-tree-node__expand-icon{
+      svg{
+        path{
+          fill: #ababb2;
+        }
+      }
+      &.is-leaf{
+        svg{
+          path{
+            fill: none;
+          }
+        }
+      }
+    }
+  }
+}
+//descriptions
+.el-descriptions__body {
+  background-color: #ffffff00;
+}
+.el-descriptions__label.el-descriptions__cell.is-bordered-label {
+  @include font_color($font_color_default);
+  @include background_main_color($background-main-default);
+}
+.el-descriptions__content.el-descriptions__cell.is-bordered-content {
+  @include font_color($font_color_default);
+}
+.el-descriptions__body .el-descriptions__table.is-bordered .el-descriptions__cell {
+  @include table_border($table_border_default);
+}
+.el-descriptions__title {
+  @include font_color($font_color_default);
+}
+//switch
+.el-switch__label {
+  @include font_color($font_color_default);
+}
+.el-switch__label.is-active {
+  color: #409eff;
+}
+//radio 
+.el-radio {
+  @include font_color($font_color_default);
+}
+.el-radio-button__original-radio:checked + .el-radio-button__inner {
+  @include radio_button_checked();
+  box-shadow: 0 0 0 0;
+}
+.el-radio-button__original-radio + .el-radio-button__inner {
+  @include radio_button();
+  box-shadow: 0 0 0 0;
+}
+//tag
+.el-select .el-select__tags .el-tag--info {
+  @include tags_info();
+}
+//checkbox
+.el-checkbox__label {
+  @include font_color($font_color_default);
+}
+.el-checkbox__inner {
+  @include background_content_color();
+  @include table_border($table_border_default)
+}
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  @include checkbox_and_radio();
+}
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  @include checkbox_and_radio();
+}
+.el-radio__inner {
+  @include background_content_color();
+  @include table_border($table_border_default)
+}
+.el-radio__input.is-checked .el-radio__inner {
+  @include checkbox_and_radio();
+}
+// header button
+.right-block {
+  .el-button {
+    @include group_button();
+    @include font_color($background_content_default);
+  }
+  .el-button.is-disabled{
+    @include group_button();
+    @include font_color($background_content_default);
+    opacity: .5;
+  }
+}
+.button-block {
+  .el-button {
+    @include group_button();
+    @include font_color($background_content_default);
+  }
+  .el-button.is-disabled{
+    @include group_button();
+    @include font_color($background_content_default);
+    opacity: .5;
+  }
+}
+.el-input-group__append, .el-input-group__prepend {
+  @include group_button();
+  @include font_color($background_content_default);
+  @include input_and_select();
+}
+.confirm_data {
+  @include table_border($table_border_default);
+}
+.confirm_data_item {
+  @include table_border($table_border_default);
+}
+.confirm_data_item_value {
+  @include table_border($table_border_default);
+}
+.el-loading-mask {
+  @include loading_mask();
+}
+.el-message--warning .el-message__content {
+  white-space: pre-line
+}
+.win-control-btn{
+  [theme="color2"] & {
+    svg{
+      path{
+        fill: #8a8a8a;
+      }
+    }
+  }
+}
+.summary{
+  [theme="default"] & {
+    .refresh{
+      color: #18aa81;
+    }
+  }
+  .el-input-number {
+    width: 80px;
+  }
+  .el-input-number.is-controls-right .el-input__wrapper {
+    padding-left:0;
+    padding-right: 26px;
+  }
+}
+.el-table-filter__bottom button {
+  @include font_color($font_color_default);
+}
+.btn-prev, .el-pagination button:disabled{
+  [theme="color2"] & {
+    background: $main_header_background_color2;
+    svg{
+      path{
+        fill: #fff;
+      }
+    }
+  }
+}
+.btn-next{
+  [theme="color2"] & {
+    background: $main_header_background_color2;
+    svg{
+      path{
+        fill: #fff;
+      }
+    }
+  }
+}
+.el-pager {
+  .number, .more{
+    [theme="color2"] & {
+      background: $main_header_background_color2;
+      color: #fff;
+    }
+  }
+}
+.el-table__body-wrapper tr td.el-table-fixed-column--left{
+  [theme="color2"] & {
+    background: $background-content_color2;
+  }
+}

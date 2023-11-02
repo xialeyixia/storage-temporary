@@ -1,0 +1,83 @@
+//default
+$main_header_background_default: #2e4051;               //页面头部背景色
+$background_main_default:#f0f5f5;                       //主面板背景色
+$background_content_default:#fff;                    //侧边、底部面板背景色
+$font_color_default: #3d3d3d;                           //主内容字体颜色
+$menu_item_active_font_default: #18af90;                //菜单选中字体色
+$menu_item_active_background_default: #283747;          //菜单选中背景色
+$menu_item_hover_font_default: #18af90;                 //菜单悬浮字体色
+$menu_item_hover_background_default: #283747;           //菜单悬浮背景色
+$table_header_font_default: #505050;                    //表头字体色
+$table_header_background_default: #f7f7f7;              //表头背景色
+$table_row_current_background_default: #dbe5f5;         //悬浮表格行背景色
+$table_row_error_background_default: #fdb8b8;           //错误表格行背景色
+$table_border_default: #e0e0e0;                         //表格边框颜色
+$groups_button_background_default: #18aa8e;             //按钮组中按钮背景色
+$groups_button_font_default: #585858;                   //按钮组中按钮字体色
+$groups_button_border_default: #cacaca;                 //按钮组中按钮边框色
+$groups_button_disabled_background_default: #eeeeee;    //按钮组中禁用按钮背景色
+$groups_button_disabled_font_default: #bbbbbb;          //按钮组中禁用按钮字体色
+$groups_button_disabled_border_default: #e0e0e0;         //按钮组中禁用按钮边框色
+$select_dropdown_background_default: #ffffff;           //下拉框背景色
+$select_dropdown__background_hover_default: #cce5ff;    //下拉框悬浮背景色
+$select_dropdown_font_selected_default: #409eff;        //下拉框选中字体色
+$select_dropdown_font_disabled_default: #c0c4cc;        //下拉框禁用字体色
+$collapse_header_background_default: #ffffff;           //折叠面板背景色
+$descriptions_label_background_default: #f5f7fa;        //描述面板标签名背景色
+$divider_border_default: #dcdfe6;                       //分割线颜色
+$disabled_input_and_select_background_default: #f5f7fa; //输入框禁用背景色
+$scrollbar_track_background_default: #eeeeee;           //滚动条轨道背景色
+$scrollbar_thumb_background_default: #c2c0c0;           //滚动条方块背景色
+$scrollbar_thumb_hover_background_default: #bbb;        //滚动条方块hover背景色
+$radio_button_checked_background_default: #409eff;      //单选按钮选中背景色
+$radio_button_checked_color_default: #ffffff;           //单选按钮选中字体色
+$radio_button_checked_border_default: #409eff;          //单选按钮选中边框色
+$radio_button_background_default: #ffffff;              //单选按钮背景色
+$radio_button_color_default: #585858;                   //单选按钮字体色
+$radio_button_border_default: #dfdfdf;                  //单选按钮边框色
+$tags_info_background_default: #e9e9e9;                 //标签背景色
+$checkbox_and_radio_background_default: #409eff;        //单选和多选框背景色
+$footer_button_hover_background_default: #f5f7fa;       //日志面板按钮悬浮背景色
+$loading_mask_background_default: #ffffffee;            //加载组件背景色
+
+//color2
+$main_header_background_color2: #2d3e5f;                //页面头部背景色
+$background_main_color2:#06142d;                        //主面板背景色
+$background-content_color2:#172645;                     //侧边、底部面板背景色
+$font_color_color2: #e9e9e9;                            //主内容字体颜色
+$menu_item_active_font_color2: #e9e9e9;                 //菜单选中字体色
+$menu_item_active_background_color2: #0f5a9d;           //菜单选中背景色
+$menu_item_hover_font_color2: #e9e9e9;                  //菜单悬浮字体色
+$menu_item_hover_background_color2: #59b3eb96;          //菜单悬浮背景色
+$table_header_font_color2: #ffffff;                     //表头字体色
+$table_header_background_color2: #17458b;               //表头背景色
+$table_row_current_background_color2: #415481;          //悬浮表格行背景色
+$table_row_error_background_color2: #c53838;            //错误表格行背景色
+$table_border_color2: #296e94;                          //表格边框颜色
+$groups_button_background_color2: #579cdc;              //按钮组中按钮背景色
+$groups_button_font_color2: #ffffff;                    //按钮组中按钮字体色
+$groups_button_border_color2: #296e94;                  //按钮组中按钮边框色
+$groups_button_disabled_background_color2: #92b8db;     //按钮组中禁用按钮背景色
+$groups_button_disabled_font_color2: #dadada;           //按钮组中禁用按钮字体色
+$groups_button_disabled_border_color2: #296e94;         //按钮组中禁用按钮边框色 
+$select_dropdown_background_color2: #132c55;            //下拉框背景色
+$select_dropdown__background_hover_color2: #0d4097;     //下拉框选中背景色
+$select_dropdown_font_selected_color2: #56d7ed;         //下拉框选中字体色
+$select_dropdown_font_disabled_color2: #9ba0ac;         //下拉框禁用字体色
+$collapse_header_background_color2: #172645;            //折叠面板背景色
+$descriptions_label_background_color2: #06142d;         //描述面板标签名背景色
+$divider_border_color2: #3a4f7a;                        //分割线颜色
+$disabled_input_and_select_background_color2:#22396b;   //输入框禁用背景色
+$scrollbar_track_background_color2: #333f5a;            //滚动条轨道背景色
+$scrollbar_thumb_background_color2: #495c81;            //滚动条方块背景色
+$scrollbar_thumb_hover_background_color2: #3d557e;      //滚动条方块hover背景色
+$radio_button_checked_background_color2: #17458b;      //单选按钮选中背景色
+$radio_button_checked_color_color2: #e9e9e9;           //单选按钮选中字体色
+$radio_button_checked_border_color2: #505f83;          //单选按钮选中边框色
+$radio_button_background_color2: #172645;              //单选按钮背景色
+$radio_button_color_color2: #ffffff;                   //单选按钮字体色
+$radio_button_border_color2: #505f83;                  //单选按钮边框色
+$tags_info_background_color2: #17458b;                  //标签背景色
+$checkbox_and_radio_background_color2: #17458b;        //单选和多选框背景色
+$footer_button_hover_background_color2: #13396d;       //日志面板按钮悬浮背景色
+$loading_mask_background_color2: #000000c0;            //加载组件背景色
