@@ -1,5 +1,5 @@
 <template>
-    <router-view />
+  <router-view />
 </template>
 
 <style lang="scss">
@@ -9,13 +9,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    PingFang SC,
+    Avenir,
+    Helvetica,
+    Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-.warning-message{
+.warning-message {
   color: #747474;
   font-size: 15px;
   display: inline-block;

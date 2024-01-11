@@ -50,7 +50,7 @@ export default {
     pool: 'Pool',
     level: 'Level',
     type: 'Type',
-    thinprovision: "Enable thin provisioning",
+    thinprovision: 'Enable thin provisioning',
     cpuusage: 'CPU usage',
     memusage: 'Memory usage',
     diskusage: 'Disk usage',
@@ -100,7 +100,7 @@ export default {
     container: 'Container',
     snippets: 'Snippets',
     useLUNsdirectly: 'Use LUNs directly',
-    kernelversion : 'Kernel Version',
+    kernelversion: 'Kernel Version',
     uptime: 'Uptime',
     serverTime: 'Now',
     online: 'Online',
@@ -178,7 +178,8 @@ export default {
     bootorder: 'Boot order',
     spiceenhancements: 'Spice enhancements',
     disabled: 'Disabled',
-    runguesttrimafteradiskmoveorvmmigration: 'Run guest-trim after a disk move or VM migration',
+    runguesttrimafteradiskmoveorvmmigration:
+      'Run guest-trim after a disk move or VM migration',
     use: 'Use',
     receive: 'Receive',
     send: 'Send',
@@ -197,7 +198,7 @@ export default {
     serialport: 'Serial Port',
     systemdisk: 'System Disk',
     save: 'Save',
-    detailedInfo: 'Detailed Information'
+    detailedInfo: 'Detailed Information',
   },
   login: {
     login: 'Login',
@@ -208,7 +209,7 @@ export default {
     inputpassword: 'Please input password!',
     chooserealm: 'Please choose realm!',
     loginfail: 'Login failed. Please try again!',
-    confirmpassword: 'Confirm password'
+    confirmpassword: 'Confirm password',
   },
   tree: {
     datacenter: 'DataCenter',
@@ -268,7 +269,7 @@ export default {
     deletesnapshot: 'Delete Snapshot',
     rename: 'Rename',
     apply: 'Apply',
-    clearlog: 'Clear Log'
+    clearlog: 'Clear Log',
   },
   table: {
     task: 'Tasks',
@@ -288,7 +289,7 @@ export default {
     length: 'Length',
     offlenunit: 'Offset length unit',
     offset: 'Offset',
-    value: 'Value'
+    value: 'Value',
   },
   validate: {
     required: 'This field is required',
@@ -297,9 +298,11 @@ export default {
     iperr: 'IP format error',
     duplicatelinknumnotallowed: 'Duplicate link number not allowed',
     duplicatelinkaddrnotallowed: 'Duplicate link address not allowed',
-    lettersornumbersaresupportedorunderscores: 'Only letters, numbers or "_" are supported',
+    lettersornumbersaresupportedorunderscores:
+      'Only letters, numbers or "_" are supported',
     lettersornumbersaresupported: 'Only letters or numbers are supported',
-    muststartwidthalettersendwidthalettersornumber: 'Must start with a letter and end with a letter or number.',
+    muststartwidthalettersendwidthalettersornumber:
+      'Must start with a letter and end with a letter or number.',
     patherr: 'Path format error',
     validcidr: 'Valid CIDR range',
     chinesecharactersarenotallowed: 'Chinese characters are not allowed',
@@ -309,7 +312,7 @@ export default {
     volSizeTips: 'must be power of 2 from 512B to 1M',
     nameCheckTips: 'accepts only alphanumeric, ., +, , and - characters',
     sameRemoteId: 'Cannot duplicate with remote node',
-    sameLocaleId: 'Cannot duplicate with local node'
+    sameLocaleId: 'Cannot duplicate with local node',
   },
   createvm: {
     busanddevice: 'Bus/Device',
@@ -335,12 +338,12 @@ export default {
   clonevm: {
     targetnode: 'Target Node',
     targetstorage: 'Target Storage',
-    sameassource: 'Same as source'
+    sameassource: 'Same as source',
   },
   deletevm: {
     confirmtodelete: 'Please enter the ID to confirm',
     purge: 'Purge from job configurations',
-    destroydisk: 'Destroy unreferenced disks owned by guest'
+    destroydisk: 'Destroy unreferenced disks owned by guest',
   },
   storage: {
     partition: 'Partition',
@@ -434,20 +437,29 @@ export default {
     maxnumoflogs: 'Maximum number of logs',
     minor: 'Minor Number',
     aCopy: 'Asynchronous Copy',
-    cCopy: 'Synchronous Copy'
+    cCopy: 'Synchronous Copy',
   },
   tips: {
-    createclustertips: 'Multiple links are used as failover, lower numbers have higher priority',
+    createclustertips:
+      'Multiple links are used as failover, lower numbers have higher priority',
     noclusterdefine: 'Standalone node - no cluster defined',
-    restartnodetocomplate: 'You need to restart the node to complete this operation. Please pay attention to saving the current business data. Please enter this interface to continue operation after restart',
-    bindingcomplate: 'Binding has been completed, please restart the virtual machine',
-    datasetautooccupybyfilesystem: 'Data set is automatically occupied by file system',
-    useproxmoxvemanagedhyperconvergedcephpool: 'Use TransCube managed hyper-converged ceph pool',
-    makesuretheqemuguestagentisinstalledinthevm: 'Make sure the QEMU Guest Agent is installed in the VM',
-    tousethesefeaturessetthedisplaytospiceinthehardwaresettingsofthevm: 'To use these features set the display to SPICE in the hardware settings of the VM',
-    makesurethespicewebdavdaemonisinstalledinthevm: 'Make sure the SPICE WebDav daemon is installed in the VM',
+    restartnodetocomplate:
+      'You need to restart the node to complete this operation. Please pay attention to saving the current business data. Please enter this interface to continue operation after restart',
+    bindingcomplate:
+      'Binding has been completed, please restart the virtual machine',
+    datasetautooccupybyfilesystem:
+      'Data set is automatically occupied by file system',
+    useproxmoxvemanagedhyperconvergedcephpool:
+      'Use TransCube managed hyper-converged ceph pool',
+    makesuretheqemuguestagentisinstalledinthevm:
+      'Make sure the QEMU Guest Agent is installed in the VM',
+    tousethesefeaturessetthedisplaytospiceinthehardwaresettingsofthevm:
+      'To use these features set the display to SPICE in the hardware settings of the VM',
+    makesurethespicewebdavdaemonisinstalledinthevm:
+      'Make sure the SPICE WebDav daemon is installed in the VM',
     draganddroptoreorder: 'Drag and drop to reorder',
-    pleasedonotclosethewindowwhileuploading: 'Please do not close the window while uploading',
+    pleasedonotclosethewindowwhileuploading:
+      'Please do not close the window while uploading',
   },
   monitor: {
     loadstatistics: 'Load statistics',
@@ -462,6 +474,5 @@ export default {
     integratedmanagementplatform: 'Integrated management platform',
     alarminfo: 'Alarm Infomation',
     temp: 'Temperature',
-  }
+  },
 }
-  

@@ -1,17 +1,23 @@
 <template>
   <div>
-    <el-select v-model="value" placeholder="Select" disabled style="width: 100%" :size="size"> 
+    <el-select
+      v-model="value"
+      placeholder="Select"
+      disabled
+      style="width: 100%"
+      :size="size"
+    >
       <div class="table-header">
-        <span  class="block-item" v-for="item in table" :key="item.label">{{item.label}}</span>
+        <span class="block-item" v-for="item in table" :key="item.label">{{
+          item.label
+        }}</span>
       </div>
-      <el-option
-        v-for="(obj,index) in data"
-        :key="index"
-        :value="obj.node"
-      >
-         <div class="table-item">
-           <span class="block-item" v-for="item in table" :key="item.value">{{obj[item.value]}}</span>
-         </div>
+      <el-option v-for="(obj, index) in data" :key="index" :value="obj.node">
+        <div class="table-item">
+          <span class="block-item" v-for="item in table" :key="item.value">{{
+            obj[item.value]
+          }}</span>
+        </div>
       </el-option>
     </el-select>
   </div>
@@ -20,15 +26,14 @@
 <script>
 export default {
   name: 'ViewCompute',
-  components: {
-  },
+  components: {},
   props: {
     data: Array,
     table: Array,
-    size: String
+    size: String,
   },
-  data(){
-    return{
+  data() {
+    return {
       // data: [{
       //   cpu: 0.127649434417935,
       //   disk: 185111805952,
@@ -44,43 +49,42 @@ export default {
       //   type: "node",
       //   uptime: 108976,
       // }],
-      value: null
+      value: null,
     }
   },
-  mounted(){
-    this.$nextTick(()=> {
-      this.value = this.data[0].node;
+  mounted() {
+    this.$nextTick(() => {
+      this.value = this.data[0].node
     })
   },
-  methods: {
-  }
+  methods: {},
 }
 </script>
 
 <style lang="scss" scoped>
-.table-item{
+.table-item {
   height: 25px;
   line-height: 25px;
-  span:last-child{
-    margin-right: 0
+  span:last-child {
+    margin-right: 0;
   }
 }
-.table-header{
+.table-header {
   height: 25px;
   padding: 0 32px 0 20px;
   line-height: 25px;
-  span:last-child{
-    margin-right: 0
+  span:last-child {
+    margin-right: 0;
   }
 }
-.block-item{
+.block-item {
   display: inline-block;
   font-size: 13px;
   margin-right: 10px;
   // border: 1px solid;
   width: 60px;
 }
-:deep(.el-select-dropdown__item){
+:deep(.el-select-dropdown__item) {
   // border: 1px solid;
   padding: 0 10px;
 }

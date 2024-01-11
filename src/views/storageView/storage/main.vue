@@ -1,6 +1,6 @@
 <template>
-  <el-container >
-    <el-container style="height: 100% ">
+  <el-container>
+    <el-container style="height: 100%">
       <el-aside>
         <LeftMenu></LeftMenu>
       </el-aside>
@@ -17,27 +17,27 @@ export default {
   name: 'ViewNode',
   components: {
     LeftMenu,
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.el-header{
+.el-header {
   height: auto;
   padding: 5px;
 }
-.el-aside{
+.el-aside {
   width: auto;
   height: 100%;
 }
-.el-divider--horizontal{
+.el-divider--horizontal {
   margin: 0;
 }
-.el-main{
+.el-main {
   padding: 12px;
   height: 100%;
 }
-.el-container{
+.el-container {
   height: 100%;
 }
 </style>

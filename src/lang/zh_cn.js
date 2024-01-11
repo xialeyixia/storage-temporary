@@ -50,7 +50,7 @@ export default {
     pool: '存储池',
     level: '级别',
     type: '类型',
-    thinprovision: "启用精简配置",
+    thinprovision: '启用精简配置',
     cpuusage: 'CPU 利用率',
     memusage: '内存使用率',
     diskusage: '硬盘使用率',
@@ -100,7 +100,7 @@ export default {
     container: '容器',
     snippets: '片段',
     useLUNsdirectly: '直接使用LUNs',
-    kernelversion : '内核版本',
+    kernelversion: '内核版本',
     uptime: '运行时间',
     serverTime: '当前时间',
     online: '在线',
@@ -208,7 +208,7 @@ export default {
     inputpassword: '请输入密码！',
     chooserealm: '请选择领域！',
     loginfail: '登录失败，请重试！',
-    confirmpassword: '确认密码'
+    confirmpassword: '确认密码',
   },
   tree: {
     datacenter: '数据中心',
@@ -269,7 +269,7 @@ export default {
     deletesnapshot: '删除快照',
     rename: '重命名',
     apply: '应用',
-    clearlog: '清空日志'
+    clearlog: '清空日志',
   },
   table: {
     task: '任务',
@@ -300,7 +300,8 @@ export default {
     duplicatelinkaddrnotallowed: '不允许重复的链接地址',
     lettersornumbersaresupportedorunderscores: '仅支持字母、数字或者"_"',
     lettersornumbersaresupported: '仅支持字母或者数字',
-    muststartwidthalettersendwidthalettersornumber: '必须以字母开头，以字母或数字结尾',
+    muststartwidthalettersendwidthalettersornumber:
+      '必须以字母开头，以字母或数字结尾',
     chinesecharactersarenotallowed: '禁止输入中文字符',
     patherr: '路径格式错误',
     validcidr: '有效的CIDR范围',
@@ -310,7 +311,7 @@ export default {
     volSizeTips: '必须是2的幂，从512B到1M',
     nameCheckTips: '仅支持数字、字母大小写以及-.+字符',
     sameRemoteId: '不可与远端节点重复',
-    sameLocaleId: '不可与本地节点重复'
+    sameLocaleId: '不可与本地节点重复',
   },
   createvm: {
     busanddevice: '总线/设备',
@@ -336,12 +337,12 @@ export default {
   clonevm: {
     targetnode: '目标节点',
     targetstorage: '目标存储',
-    sameassource: '与来源相同'
+    sameassource: '与来源相同',
   },
   deletevm: {
     confirmtodelete: '请输入ID以确认',
     purge: '从工作配置中清除',
-    destroydisk: '销毁用户拥有的未引用磁盘'
+    destroydisk: '销毁用户拥有的未引用磁盘',
   },
   storage: {
     partition: '分区',
@@ -435,18 +436,22 @@ export default {
     maxnumoflogs: '最大日志数',
     minor: '次设备号',
     aCopy: '异步复制',
-    cCopy: '同步复制'
+    cCopy: '同步复制',
   },
   tips: {
     createclustertips: '多个链接用作故障转移，数字越小优先级越高。',
     noclusterdefine: '独立节点-没有定义集群',
-    restartnodetocomplate: '需要重启节点以完成此操作，请注意保存当前业务数据。重启完成后请进入本界面继续操作!',
+    restartnodetocomplate:
+      '需要重启节点以完成此操作，请注意保存当前业务数据。重启完成后请进入本界面继续操作!',
     bindingcomplate: '已完成绑定，请重启虚拟机',
     datasetautooccupybyfilesystem: '数据集自动被文件系统占用',
     useproxmoxvemanagedhyperconvergedcephpool: '使用TransCube管理超融合ceph池',
-    makesuretheqemuguestagentisinstalledinthevm: '确保在虚拟机中安装了QEMU Guest Agent',
-    tousethesefeaturessetthedisplaytospiceinthehardwaresettingsofthevm: '要使用这些功能，请在虚拟机的硬件设置中将显示设置为SPICE',
-    makesurethespicewebdavdaemonisinstalledinthevm: '确保在虚拟机中安装了SPICE WebDav守护程序',
+    makesuretheqemuguestagentisinstalledinthevm:
+      '确保在虚拟机中安装了QEMU Guest Agent',
+    tousethesefeaturessetthedisplaytospiceinthehardwaresettingsofthevm:
+      '要使用这些功能，请在虚拟机的硬件设置中将显示设置为SPICE',
+    makesurethespicewebdavdaemonisinstalledinthevm:
+      '确保在虚拟机中安装了SPICE WebDav守护程序',
     draganddroptoreorder: '拖放以重新排序',
     pleasedonotclosethewindowwhileuploading: '正在上传，请勿关闭窗口！',
   },
@@ -462,6 +467,6 @@ export default {
     virtualmachine: '云主机',
     integratedmanagementplatform: '综合管理平台',
     alarminfo: '告警信息',
-    temp: '温度'
-  }
+    temp: '温度',
+  },
 }
